@@ -1,3 +1,7 @@
+import 'dart:async';
+import 'dart:convert';
+import 'dart:io';
+
 import 'switch.dart';
 
 void main() {
@@ -13,6 +17,13 @@ void main() {
   var (age, name) = getNameAge();
   print(name);
   print(age);
+  printNameAr("Jose Leonidas Carcamo Urbina");
+
+  PrintAll(
+      name: "jose Leonidas",
+      age: 27,
+      greeting:
+          "hello world"); // WITH NAME ARGUMENTS YOU DON'T HAVE TO MACHT THE POSITION
 }
 // functions
 
@@ -27,4 +38,21 @@ String get_name() {
 // RETURN 2 DATATYPES
 (int, String) getNameAge() {
   return (27, "leonias");
+}
+
+//RETURN A NULL OR A STRING
+String? getLastName() {
+  print("this is null");
+  return null;
+}
+
+//FUNCTION WITH ARGUMENTS
+void printNameAr(String name) {
+  print(name);
+}
+
+//NAME ARGUMENTS
+void PrintAll(
+    {required String name, required int age, required String greeting}) {
+  print("$name $age $greeting");
 }
