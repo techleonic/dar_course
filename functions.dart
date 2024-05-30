@@ -19,7 +19,7 @@ void main() {
   print(age);
   printNameAr("Jose Leonidas Carcamo Urbina");
 
-  PrintAll(
+  PrintAll(1, true,
       name: "jose Leonidas",
       age: 27,
       greeting:
@@ -52,7 +52,10 @@ void printNameAr(String name) {
 }
 
 //NAME ARGUMENTS
-void PrintAll(
-    {required String name, required int age, required String greeting}) {
+void PrintAll(int kids, bool is_adult, //YOU COULD HAVE POSITIONAL ARGUMENTS
+    {required String name, //AND NAME ARGUMENTS IN THE SAME FUNCTION
+    required int age,
+    required String greeting, //THE ARGUMENTS COULD BE REQUIRED OR NULL
+    String? wife}) {
   print("$name $age $greeting");
 }
