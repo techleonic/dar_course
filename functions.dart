@@ -1,9 +1,3 @@
-import 'dart:async';
-import 'dart:convert';
-import 'dart:io';
-
-import 'switch.dart';
-
 void main() {
   //funtions
   printName();
