@@ -26,9 +26,13 @@ void main() {
 
   final something = printSomething(); //function that returns a function
   something();
+
+  //anonumous function
   () {
     print("yooo");
   }();
+
+  print(myName());
 }
 // functions
 
@@ -77,3 +81,6 @@ Function printSomething() {
     print("yooooo");
   };
 }
+
+//arrow functions
+String myName() => 'leonidas';
