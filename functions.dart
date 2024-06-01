@@ -18,6 +18,17 @@ void main() {
       age: 27,
       greeting:
           "hello world"); // WITH NAME ARGUMENTS YOU DON'T HAVE TO MACHT THE POSITION
+
+  //you are ebla to call the function retunrs by name
+  final stuff = printStuff();
+  print(stuff.nombre);
+  print(stuff.numero);
+
+  final something = printSomething(); //function that returns a function
+  something();
+  () {
+    print("yooo");
+  }();
 }
 // functions
 
@@ -51,5 +62,18 @@ void PrintAll(int kids, bool is_adult, //YOU COULD HAVE POSITIONAL ARGUMENTS
     required int age,
     required String greeting, //THE ARGUMENTS COULD BE REQUIRED OR NULL
     String? wife}) {
+  //nulleable value
   print("$name $age $greeting");
+}
+
+//NAME RECORD RETURN A FUNCTION WITH THE NAME
+({int numero, String nombre}) printStuff() {
+  return (numero: 12, nombre: "leonidas");
+}
+
+//FUNCTION THAT RETURNS A FUNCTION
+Function printSomething() {
+  return () {
+    print("yooooo");
+  };
 }

@@ -84,7 +84,7 @@ void main() {
   final finalVaribel = '10';
   const constVariable = '50';
 
-  //final and const can not be reasing
+  //final and const can not be reasaing
   //finalVaribel = 10;
   //constVaribble = 11;
   //DateTime is obtional
