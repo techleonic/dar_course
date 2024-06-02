@@ -12,6 +12,17 @@ void main() {
   cookie.baking();
   print(cookie.isCooling());
   print(cookie.shape);
+
+  //change clases
+  final secondCookie = Cookie(); // secondCookie is a type final
+  secondCookie.shape =
+      'Rectangle'; // but shape is not final its a normal String
+  print("Cookie Shape : ${secondCookie.shape}");
+
+  print(Cookie().shape);
+  Cookie().shape = "Rectangle";
+  print(Cookie()
+      .shape); // every time you use Cookie() it creates a new instas of Cookie
 }
 
 class Cookie {
