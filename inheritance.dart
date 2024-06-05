@@ -28,6 +28,10 @@ class someClass {
   void accelerate() {
     speed += 20;
   }
+
+  void get_speed() {
+    print(speed);
+  }
 }
 
 class Vehicule extends someClass {
@@ -35,9 +39,16 @@ class Vehicule extends someClass {
   bool isEngineWorking = false;
   bool isLightOn = true;
 
+  //we change the accelerate function coming from someClass
   @override
   void accelerate() {
     speed += 10;
+  }
+
+  // for override a function you just tha name of de function to be the same
+  @override
+  int get_speed() {
+    return speed;
   }
 }
 
