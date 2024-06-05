@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:html_common';
 import 'dart:mirrors';
 
 import 'functions.dart';
@@ -25,6 +26,7 @@ void main() {
 
 class someClass {
   int speed = 10;
+  String brand = "Bugatti";
   void accelerate() {
     speed += 20;
   }
@@ -49,6 +51,11 @@ class Vehicule extends someClass {
   @override
   int get_speed() {
     return speed;
+  }
+
+  //use super to get the mother class propirities
+  void getBrand() {
+    print(super.brand);
   }
 }
 
