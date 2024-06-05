@@ -29,15 +29,16 @@ class bike implements Vehicule {
 
 class truck implements Vehicule {
   @override
-  int noOfWheels = 4;
+  int noOfWheels = 13;
 
   @override
-  int speed = 100;
+  int speed = 20;
 
   @override
   bool isEngineRuning = true;
 
   @override
   int acelerate() {
-    return speed += 10;
+    return speed += 80;
   }
+}
