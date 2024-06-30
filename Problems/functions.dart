@@ -22,6 +22,13 @@ void main(List<String> args) {
   var (nombre, anos) = get_all();
   print(nombre);
   print(anos);
+
+  print(thisCanReturnNull());
+  print(nameArgument(name: 12, age: 1));
+
+  final recordall = getAllRecord();
+  print(recordall.age);
+  print(recordall.name);
 }
 
 int get_age(int user_date) {
@@ -41,10 +48,21 @@ void vertical_name(String name) {
   return (name_store, age_stroe);
 }
 
-String? thisCanReturnNull() {
+String? thisCanReturnNull({String? funName = ""}) {
   if (age_stroe == 0) {
     return null;
   } else {
-    return "User has enter age";
+    return "User has enter age $funName";
   }
 }
+
+String nameArgument({age, required name}) {
+  return age + name;
+}
+
+({int age, String name}) getAllRecord() {
+  return (age: age_stroe, name: name_store);
+}
+
+String arrowNme() => name_store;
+int arrowAge() => age_stroe;
