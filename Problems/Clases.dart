@@ -13,7 +13,7 @@ void main() {
   newUser.height = 160;
   print(newUser.get_all());
 
-  final newAdmin = Admin("kenia", "123456");
+  final newAdmin = Admin(adminName: "kenia", password: "123456");
   newAdmin.age = 20;
   newAdmin.name = "kenia";
   newAdmin.height = 150;
@@ -33,5 +33,5 @@ class User {
 class Admin extends User {
   String adminName;
   String password;
-  Admin(this.adminName, this.password);
+  Admin({required this.adminName, required this.password});
 }
