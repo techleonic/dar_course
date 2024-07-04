@@ -20,7 +20,10 @@ void main() {
   print(newAdmin.get_all());
 
   newAdmin.setId = 1;
-  print(newAdmin.id):
+  print(newAdmin.id);
+  print(Admin.level);
+  Admin.changeLevel();
+  print(Admin.level)
 }
 
 class User {
@@ -47,5 +50,10 @@ class Admin extends User {
   //setter
   set setId(int id) {
     _id = id;
+  }
+
+  static String level = "admin";
+  static void changeLevel() {
+    level = "user";
   }
 }
