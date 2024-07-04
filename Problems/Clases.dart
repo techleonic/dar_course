@@ -18,6 +18,9 @@ void main() {
   newAdmin.name = "kenia";
   newAdmin.height = 150;
   print(newAdmin.get_all());
+
+  newAdmin.setId = 1;
+  print(newAdmin.id):
 }
 
 class User {
@@ -34,4 +37,15 @@ class Admin extends User {
   String adminName;
   String password;
   Admin({required this.adminName, required this.password});
+
+  //private variables in other file
+  int _id = 0;
+
+  //getter
+  int get id => _id;
+
+  //setter
+  set setId(int id) {
+    _id = id;
+  }
 }
