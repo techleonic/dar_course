@@ -23,7 +23,7 @@ void main() {
   print(newAdmin.id);
   print(Admin.level);
   Admin.changeLevel();
-  print(Admin.level)
+  print(Admin.level);
 }
 
 class User {
@@ -55,5 +55,43 @@ class Admin extends User {
   static String level = "admin";
   static void changeLevel() {
     level = "user";
+  }
+
+  @override
+  // TODO: implement age
+  int get age => super.age;
+}
+
+//Impletens overrides every propierity and function
+class Acountant implements User {
+  @override
+  String name = "Leonidas";
+  @override
+  int age = 27;
+  @override
+  int height = 170;
+  @override
+  String get_all() {
+    return "$name $age $height cm";
+  }
+}
+
+abstract class Students {
+  double getAverage();
+  int math = 0;
+  int languaje = 0;
+  int sciencie = 0;
+}
+
+class Student implements Students {
+  @override
+  int math = 60;
+  @override
+  int languaje = 70;
+  @override
+  int sciencie = 80;
+  @override
+  double getAverage() {
+    return (math + languaje + sciencie) / 3;
   }
 }
