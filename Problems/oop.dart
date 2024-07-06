@@ -51,6 +51,25 @@ class Bunny extends ForLegs with jump {
 }
 
 //not stablish parent child relation
+//you have to use the keyword with to use the mixin
 mixin jump {
   int jumpSpeed = 1;
 }
+
+//sealed class can not be extended out of file
+// can not be constructed
+sealed class Car {}
+
+//this can not be access out of this file
+//it can be constructed
+final class MotorBike {}
+
+//base class can not be implemented can be extended
+//the clases that extends to shul be base final or sealed
+base class Bike {}
+
+//interface clases can not be extended just implemented
+interface class Fourbyfour {}
+
+//all the properies from a mixin with a class
+mixin class skate {}
